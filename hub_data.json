@@ -1,0 +1,181 @@
+{
+  "about": {
+    "channels": {
+      "Email": "mailto:contact@zjulian.dev",
+      "GitHub": "https://github.com/你的用户名",
+      "LinkedIn": "https://linkedin.com/in/你的用户名"
+    },
+    "profile": {
+      "CLASSIFICATION": "Full-Stack Alchemist",
+      "LOCATION": "Digital Realm",
+      "NAME": "Julian(zqc)",
+      "STATUS": "Active Development"
+    },
+    "systems": [
+      "Python • Neural Processing",
+      "JavaScript • Interface Design",
+      "Neural Networks • AI Integration",
+      "System Design • Architecture",
+      "Data Analysis • Visualization"
+    ]
+  },
+  "blog": [
+    {
+      "date": "2025-09-10",
+      "id": "blog_1",
+      "title": "关于大型语言模型训练的思考"
+    },
+    {
+      "date": "2025-08-22",
+      "id": "blog_2",
+      "title": "如何用Three.js构建一个城市"
+    },
+    {
+      "date": "2025-07-15",
+      "id": "blog_3",
+      "title": "现代前端框架性能优化实践"
+    },
+    {
+      "date": "2025-10-01",
+      "description": "",
+      "id": "blog_1759297334359",
+      "title": "1"
+    },
+    {
+      "date": "2025-10-01",
+      "description": "",
+      "id": "blog_1759297337735",
+      "title": "2"
+    },
+    {
+      "date": "2025-10-01",
+      "description": "",
+      "id": "blog_1759297341325",
+      "title": "3"
+    },
+    {
+      "date": "2025-10-01",
+      "description": "",
+      "id": "blog_1759297344562",
+      "title": "4"
+    },
+    {
+      "date": "2025-10-01",
+      "description": "",
+      "id": "blog_1759297347905",
+      "title": "5"
+    }
+  ],
+  "movies": [
+    {
+      "description": "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea.",
+      "duration": "148 min",
+      "genre": "Sci-Fi",
+      "id": "movie_1",
+      "rating": 5,
+      "title": "Inception",
+      "year": "2010"
+    },
+    {
+      "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      "duration": "169 min",
+      "genre": "Sci-Fi",
+      "id": "movie_2",
+      "rating": 5,
+      "title": "Interstellar",
+      "year": "2014"
+    },
+    {
+      "description": "A computer programmer discovers that reality as he knows it is a simulation created by machines.",
+      "duration": "136 min",
+      "genre": "Sci-Fi",
+      "id": "movie_3",
+      "rating": 5,
+      "title": "The Matrix",
+      "year": "1999"
+    },
+    {
+      "description": "A young blade runner's discovery of a long-buried secret leads him to track down former blade runner Rick Deckard.",
+      "duration": "164 min",
+      "genre": "Sci-Fi",
+      "id": "movie_4",
+      "rating": 4,
+      "title": "Blade Runner 2049",
+      "year": "2017"
+    },
+    {
+      "description": "A programmer is selected to participate in a ground-breaking experiment in synthetic intelligence.",
+      "duration": "108 min",
+      "genre": "Sci-Fi",
+      "id": "movie_5",
+      "rating": 4,
+      "title": "Ex Machina",
+      "year": "2014"
+    }
+  ],
+  "music": [
+    {
+      "album": "A Night at the Opera",
+      "artist": "Queen",
+      "description": "A six-minute suite consisting of several sections without a chorus: an intro, a ballad, a guitar solo, an opera, a hard rock part and a reflective coda.",
+      "id": "music_1",
+      "title": "Bohemian Rhapsody",
+      "year": "1975"
+    },
+    {
+      "album": "Led Zeppelin IV",
+      "artist": "Led Zeppelin",
+      "description": "Often considered one of the greatest rock songs of all time, featuring multiple distinct sections.",
+      "id": "music_2",
+      "title": "Stairway to Heaven",
+      "year": "1971"
+    },
+    {
+      "album": "Hotel California",
+      "artist": "Eagles",
+      "description": "A classic rock anthem with enigmatic lyrics about the dark underbelly of the American dream.",
+      "id": "music_3",
+      "title": "Hotel California",
+      "year": "1976"
+    },
+    {
+      "album": "The Wall",
+      "artist": "Pink Floyd",
+      "description": "One of Pink Floyd's most famous songs, featuring iconic guitar solos and haunting vocals.",
+      "id": "music_4",
+      "title": "Comfortably Numb",
+      "year": "1979"
+    },
+    {
+      "album": "Imagine",
+      "artist": "John Lennon",
+      "description": "A peace anthem that calls for unity and envisioning a world without barriers.",
+      "id": "music_5",
+      "title": "Imagine",
+      "year": "1971"
+    }
+  ],
+  "projects": [
+    {
+      "description": "A cyberpunk-themed personal blog framework built with modern web technologies. Features dynamic animations and responsive design.",
+      "id": "proj_1",
+      "title": "Project Neon Blade"
+    },
+    {
+      "description": "Advanced GAN-based artwork generator utilizing deep learning models for creating unique digital art pieces.",
+      "id": "proj_2",
+      "title": "AI Art Generator"
+    },
+    {
+      "description": "Real-time data visualization dashboard with interactive charts and customizable metrics display.",
+      "id": "proj_3",
+      "title": "Data Visualizer"
+    },
+    {
+      "date": "",
+      "description": "",
+      "id": "proj_1759315915879",
+      "title": "nice"
+    }
+  ]
+}

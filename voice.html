@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gemini Live Voice Demo</title>
+</head>
+<body>
+  <button id="start">🎤 Start Conversation</button>
+  <script>
+  const API_KEY = "AIzaSyAP48FPp9uqmlHoZz4nYJt31byMjxV7fjE";
+  const MODEL = "models/gemini-2.5-flash-native-audio-preview-09-2025";
+
+  let ws, audioCtx;
+
+  document.getElementById("start").onclick = async () => {
+    // 建立 WebSocket
+    const url = `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent?key=${API_KEY}`;
+    ws = new WebSocket(url);
+    ws.binaryType = "arraybuffer";
+
+    ws.onopen = () => {
+      // 第一个消息必须是 setup
+      ws.send(JSON.stringify({
+        setup: {
+          model: MODEL,
+          generationConfig: {
+            responseModalities: ["AUDIO"]
+          }
+        }
+      }));
+      startMic();
+    };
+
+    // 播放返回的音频
+    audioCtx = new AudioContext();
+    ws.onmessage = async (e) => {
+      const msg = JSON.parse(e.data);
+      if (msg.realtimeOutput && msg.realtimeOutput.mediaChunks) {
+        for (const chunk of msg.realtimeOutput.mediaChunks) {
+          const audioData = Uint8Array.from(atob(chunk.data), c => c.charCodeAt(0)).buffer;
+          const buf = await audioCtx.decodeAudioData(audioData);
+          const src = audioCtx.createBufferSource();
+          src.buffer = buf;
+          src.connect(audioCtx.destination);
+          src.start();
+        }
+      }
+    };
+  };
+
+  // 采集麦克风并推送音频帧
+  async function startMic() {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    const ctx = new AudioContext({ sampleRate: 16000 });
+    const source = ctx.createMediaStreamSource(stream);
+    const processor = ctx.createScriptProcessor(4096, 1, 1);
+
+    source.connect(processor);
+    processor.connect(ctx.destination);
+
+    processor.onaudioprocess = (e) => {
+      if (!ws || ws.readyState !== WebSocket.OPEN) return;
+      const input = e.inputBuffer.getChannelData(0);
+      const buf = new ArrayBuffer(input.length * 2);
+      const view = new DataView(buf);
+      for (let i = 0; i < input.length; i++) {
+        view.setInt16(i*2, input[i]*0x7fff, true);
+      }
+      const b64 = btoa(String.fromCharCode(...new Uint8Array(buf)));
+      ws.send(JSON.stringify({
+        realtimeInput: {
+          mediaChunks: [
+            { data: b64, mimeType: "audio/pcm;rate=16000" }
+          ]
+        }
+      }));
+    };
+  }
+  </script>
+</body>
+</html>

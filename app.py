@@ -26,9 +26,9 @@ SOURCE_EXCEL_NAME = "source.xlsx"
 
 # --- 外部 API 配置 ---
 AI_API_URL = "https://jarvisai.deno.dev/v1/chat/completions"
-AI_API_KEY = os.environ.get("AI_API_KEY", "AIzaSyAP48FPp9uqmlHoZz4nYJt31byMjxV7fjE")
+AI_API_KEY = os.environ.get("AI_API_KEY", " ")
 AI_MODEL_NAME = "gemini-2.5-pro"
-TMDB_API_KEY = os.environ.get("TMDB_API_KEY", "30f8f5d19b6e17b84205bdba71474cd4")
+TMDB_API_KEY = os.environ.get("TMDB_API_KEY", " ")
 TMDB_API_BASE_URL = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
 

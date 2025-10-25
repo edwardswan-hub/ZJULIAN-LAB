@@ -14,7 +14,7 @@ from converter import convert_excel_to_json
 UPLOAD_DIR = "uploads"
 CACHE_JSON = "movies.json"
 SOURCE_EXCEL_NAME = "source.xlsx"
-TMDB_API_KEY = "30f8f5d19b6e17b84205bdba71474cd4"
+TMDB_API_KEY = " "
 TMDB_API_BASE_URL = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
 

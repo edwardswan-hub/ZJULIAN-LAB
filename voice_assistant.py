@@ -10,7 +10,7 @@ import threading
 # -------------------
 # 配置
 # -------------------
-GEMINI_API_KEY = os.environ.get("AIzaSyAP48FPp9uqmlHoZz4nYJt31byMjxV7fjE")
+GEMINI_API_KEY = os.environ.get(" ")
 MODEL = "models/gemini-2.5-flash-native-audio-preview-09-2025"
 GEMINI_URL = f"wss://generativelanguage.googleapis.com/v1beta/{MODEL}:streamGenerateContent?key={GEMINI_API_KEY}"
 
@@ -181,3 +181,4 @@ def live(ws):
 # -------------------
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=3000)
+
